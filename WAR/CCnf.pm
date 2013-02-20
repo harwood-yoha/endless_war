@@ -1,0 +1,103 @@
+package WAR::CCnf;
+
+#use vars qw($VERSION);
+
+our $VERSION=0.1; 
+
+use strict;
+require Exporter;
+our @ISA    = qw( Exporter );
+
+our @EXPORT = qw( 
+
+NGRAM_CHARS SPACES PUNCTUATION LOWERCASE FLANKBREAKS USE_NGRAMS_WITH_ONE_OCCURRENCE NGRAM_GRAPH_WIDTH NGRAM_GRAPH_HEIGHT NGRAM_STR_TAB
+
+LOG_FILE DEBUG_LEVEL VITAL VITAL_FLOW BASIC_FLOW MISC_FLOW VITAL_COMPARISON BASIC_COMPARISON MISC_COMPARISON VERBOSE_COMPARISON	
+
+MYSQL_LINES	
+
+WITH_PNG WITH_COLOUR_TERM WITH_SERVER SERVER_SCRIPT WITH_MYSQL_WINDOW  
+
+SERVER_ADDRESS PORT DOCS_PER_DAY BUFFER_SIZE NEW_LOG_DAILY DEBUG_LEVEL	WITH_LOG	
+
+TIME_ZONE			NUMBER_OF_DAYS_TO_COMPLETE 	START_YEAR 			START_MONTH 		
+	START_DAY 	START_HOUR 	START_MIN 	START_SEC 	START_NANO 	USE_TODAY 
+
+SHOW_SUMMARY_LINES 			HOME MYSQL_PORT WITH_MYSQL_SERVER MYSQL_SERVER_SCRIPT	
+);
+
+use constant HOME =>  '/home/harwood/Void_Gallery/endless_war_0_5';
+
+############
+#set the time start to NOW
+use constant {
+	TIME_ZONE			=> "Europe/London",
+	NUMBER_OF_DAYS_TO_COMPLETE 	=> 30,
+	START_YEAR 			=> 2012,
+	START_MONTH 			=> 4,
+	START_DAY 			=> 28,
+	START_HOUR 			=> 0,
+	START_MIN 			=> 0,
+	START_SEC 			=> 0,
+	START_NANO 			=> 0,
+	USE_TODAY 			=> 1, # use local time
+
+};
+##SERVER_CLIENT
+#
+use constant { 
+	SERVER_ADDRESS 		=> 'localhost',
+	PORT 			=> '20204',
+	MYSQL_PORT		=> '20206',
+	SERVER_SCRIPT 		=> 'endless_war_server_0_3.pl',
+	CNTRL_SCRIPT 		=> 'endless_war_cntrl_0_4.pl',
+	MYSQL_SERVER_SCRIPT	=> 'endless_was_mysql_server_0_1.pl',
+	BUFFER_SIZE 		=> 160,
+};
+##OUTPUTS
+#
+use constant { 
+	WITH_MYSQL_WINDOW 	=> 0,
+	WITH_MYSQL_SERVER	=> 0,
+	WITH_COLOUR_TERM 	=> 1,
+	WITH_SERVER 		=> 0,
+	WITH_LOG		=> 1,
+	NEW_LOG_DAILY		=> 0,
+	DOCS_PER_DAY => 20000, # number of records to process
+};
+
+##DEBUG CONSTANTS
+
+use constant LOG_FILE => HOME.'/endless_war_log.txt';
+
+
+use constant {
+	DEBUG_LEVEL			=> 1,
+	VITAL				=> 1,
+ 	VITAL_FLOW 			=> 2,
+ 	BASIC_FLOW			=> 4,
+	MISC_FLOW			=> 5,
+	VERBOSE_FLOW		=> 6,
+	VITAL_COMPARISON	=> 2,
+	BASIC_COMPARISON 	=> 4,
+	MISC_COMPARISON		=> 5,
+	VERBOSE_COMPARISON	=> 6,
+
+};
+
+
+# NGRAM CONSTANTS
+use constant {
+	NGRAM_CHARS => 3,
+ 	SPACES => 0,
+    	PUNCTUATION => 0,
+    	LOWERCASE => 1,
+    	FLANKBREAKS => 0,
+	USE_NGRAMS_WITH_ONE_OCCURRENCE => 1,
+	NGRAM_GRAPH_HEIGHT => 10,
+	NGRAM_GRAPH_WIDTH => 160,
+	NGRAM_STR_TAB => 10,
+	SHOW_SUMMARY_LINES => 14,
+	MYSQL_LINES	=> 15000,
+};
+
