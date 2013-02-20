@@ -24,7 +24,7 @@ use Term::ScreenColor;
 #	blink       => 5    magenta     => 35    on_magenta  => 45
 #	inverse     => 7    cyan        => 36    on_cyan     => 46
 #	concealed   => 8    white       => 37    on_white    => 47
-
+# testing
 use constant REC_TITLE_CLR 	=> "1;31;47";
 use constant TITLE_CLR 		=> "1;31;47";
 use constant BORDER_CLR 	=> "1;32;47";
