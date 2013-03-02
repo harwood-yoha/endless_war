@@ -15,9 +15,9 @@ require Exporter;
 
 # USED for 'search' 'admin' on web interface:
 
-use constant MYUSER   => 'root';
+use constant MYUSER   => 'XxXxX';
 use constant MYDATABASE => 'WAR_DIARY';
-use constant MYPASS => 'YSB40_c'; 
+use constant MYPASS => 'XxXx'; 
 
 use constant {
 
